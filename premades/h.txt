@@ -52,3 +52,5 @@ https://www.my-proxy.com/free-anonymous-proxy.html
 https://www.my-proxy.com/free-elite-proxy.html
 https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/http.txt
 https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt
+https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/http.txt
+https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/https.txt

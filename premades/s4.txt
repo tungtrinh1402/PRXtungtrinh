@@ -26,3 +26,4 @@ https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies/socks4.txt
 https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/socks4.txt
 https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt
 https://sheesh.rip/socks4
+https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/socks.txt
