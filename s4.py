@@ -56,7 +56,7 @@ def main():
 
         elif premades not in no:
             print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(3)
+            time.sleep(10)
             main()
             exit()
 
@@ -71,7 +71,7 @@ def main():
         config = config[premades]
     except KeyError:
         print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-        time.sleep(3)
+        time.sleep(10)
         main()
         exit()
 
@@ -84,7 +84,7 @@ def main():
 
         if clearingcnt not in yes and clearingcnt not in no:
             print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(3)
+            time.sleep(10)
             main()
             exit()
     elif clearingcnt not in yes and clearingcnt not in no:
@@ -103,7 +103,7 @@ def main():
 
         if clearingproxy != "y" and clearingproxy != "ye" and clearingproxy != "yes" and clearingproxy != "n" and clearingproxy != "no":
             print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(3)
+            time.sleep(10)
             main()
             exit()
     
@@ -123,7 +123,7 @@ def main():
 
         if randomUseragent not in yes and randomUseragent not in no:
             print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(3)
+            time.sleep(10)
             main()
             exit()
     
@@ -150,13 +150,13 @@ def main():
         timeout = int(timeout)
     except ValueError:
         print(f"{white}[{color}!{white}] {color}Timeout needs a number")
-        time.sleep(3)
+        time.sleep(10)
         main()
         exit()
     
     if timeout < 1:
         print(f"{white}[{color}!{white}] {color}Timeout must be higher than 0")
-        time.sleep(3)
+        time.sleep(10)
         main()
         exit()
     
@@ -174,13 +174,13 @@ def main():
         threads = int(threads)
     except ValueError:
         print(f"{white}[{color}!{white}] {color}Thread needs a number")
-        time.sleep(3)
+        time.sleep(10)
         main()
         exit()
         
     if threads < 1:
         print(f"{white}[{color}!{white}] {color}Thread needs a number greater than 0")
-        time.sleep(3)
+        time.sleep(10)
         main()
         exit()
     
@@ -227,9 +227,6 @@ def main():
 
     print(f"{white}[{color}^{white}] Finished in {color}{time.time()-start:.2f}s{white}!\n")
     print("You can now close the tab")
-
-    input("")
-
 
 
 def scrape(site: str):

@@ -1,5 +1,5 @@
 https://raw.githubusercontent.com/proxy4parsing/proxy-list/main/http.txt
-https://www.proxyscan.io/download?type=https
+https://proxyscan.io/download?type=https
 https://api.proxyscrape.com/v2/?request=getproxies&protocol=http
 https://openproxy.space/list/http
 https://openproxylist.xyz/http.txt
