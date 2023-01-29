@@ -54,3 +54,15 @@ https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/http.txt
 https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt
 https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/http.txt
 https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/https.txt
+https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/HTTP.txt
+https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
+https://raw.githubusercontent.com/hendrikbgr/Free-Proxy-Repo/master/proxy_list.txt
+https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt
+https://raw.githubusercontent.com/yemixzy/proxy-list/main/proxy-list/data.txt
+https://rootjazz.com/proxies/proxies.txt
+https://raw.githubusercontent.com/ReCaree/proxy-scrapper/master/proxy/http-removed.txt
+https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
+https://raw.githubusercontent.com/miyukii-chan/proxy-list/master/proxies/http.txt
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/http.txt
+http://localhost:8089/api/history
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/http.txt

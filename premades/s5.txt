@@ -28,3 +28,11 @@ https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/socks5.tx
 https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt
 https://sheesh.rip/socks5
 https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/socks.txt
+https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/SOCKS5.txt
+https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks5.txt
+https://raw.githubusercontent.com/ReCaree/proxy-scrapper/master/proxy/socks5-removed.txt
+https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/socks5.txt
+https://raw.githubusercontent.com/miyukii-chan/proxy-list/master/proxies/socks5.txt
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/socks5.txt
+http://localhost:8089/api/history
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/socks5.txt

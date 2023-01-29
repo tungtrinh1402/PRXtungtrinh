@@ -2,13 +2,15 @@
 python h.py
 python s4.py
 python s5.py
+TIMEOUT 2
 del outh.txt
 del outs4.txt
 del outs5.txt
-python kiemtrah.py 50 h.txt http
+TIMEOUT 2
+python kiemtrah.py 50 h.txt socks
 python kiemtras4.py 50 s4.txt socks
 python kiemtras5.py 50 s5.txt socks
-TIMEOUT 3
+TIMEOUT 2
 	:: Navigate to the directory you wish to push to GitHub
 	::Change <path> as needed. Eg. C:\Users\rich\Desktop\Writings
 	cd C:\Users\Administrator\Desktop\TOOL VIA ACC\CÀO PROXY\PRXtungtrinh
@@ -34,7 +36,7 @@ TIMEOUT 3
 	
 	::Wait 900 seconds until going to the start of the loop.
 	::Change as needed.
-	TIMEOUT 2000
+	TIMEOUT 3000
 	
 ::Restart from the top.	
 goto loop

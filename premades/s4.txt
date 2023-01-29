@@ -27,3 +27,11 @@ https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/socks4.tx
 https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt
 https://sheesh.rip/socks4
 https://raw.githubusercontent.com/BlackSnowDot/proxylist-update-every-minute/main/socks.txt
+https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/SOCKS4.txt
+https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks4.txt
+https://raw.githubusercontent.com/ReCaree/proxy-scrapper/master/proxy/socks4-removed.txt
+https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/socks4.txt
+https://raw.githubusercontent.com/miyukii-chan/proxy-list/master/proxies/socks4.txt
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/socks4.txt
+http://localhost:8089/api/history
+https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/socks4.txt
