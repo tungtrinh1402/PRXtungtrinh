@@ -9,5 +9,5 @@
 
     threads: "10", # '?' for asking | '[Threadcount]'
 
-    timeout: "100" # Sets timeout for the sites | '?' for asking | '[seconds]' | '10' is default
+    timeout: "300" # Sets timeout for the sites | '?' for asking | '[seconds]' | '10' is default
 }

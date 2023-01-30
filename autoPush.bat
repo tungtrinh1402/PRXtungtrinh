@@ -7,9 +7,9 @@ del outh.txt
 del outs4.txt
 del outs5.txt
 TIMEOUT 2
-python kiemtrah.py 50 h.txt socks
-python kiemtras4.py 50 s4.txt socks
-python kiemtras5.py 50 s5.txt socks
+ktip.exe -file h.txt -type http -o outh.txt -timeout 30 -workers 900 -silent
+ktip.exe -file s4.txt -type http -o outs4.txt -timeout 30 -workers 900 -silent
+ktip.exe -file s5.txt -type http -o outs5.txt -timeout 30 -workers 900 -silent
 TIMEOUT 2
 	:: Navigate to the directory you wish to push to GitHub
 	::Change <path> as needed. Eg. C:\Users\rich\Desktop\Writings

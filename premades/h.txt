@@ -63,6 +63,10 @@ https://rootjazz.com/proxies/proxies.txt
 https://raw.githubusercontent.com/ReCaree/proxy-scrapper/master/proxy/http-removed.txt
 https://raw.githubusercontent.com/UptimerBot/proxy-list/main/proxies/http.txt
 https://raw.githubusercontent.com/miyukii-chan/proxy-list/master/proxies/http.txt
-https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/http.txt
 http://localhost:8089/api/history
-https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/http.txt
+https://raw.githubusercontent.com/RX4096/proxy-list/main/online/http.txt
+https://www.proxyscan.io/download?type=http
+https://api.openproxylist.xyz/http.txt
+https://cyber-hub.pw/statics/proxy.txt
+https://raw.githubusercontent.com/RX4096/proxy-list/main/online/https.txt
+https://www.proxyscan.io/download?type=https
