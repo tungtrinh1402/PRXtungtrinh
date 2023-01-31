@@ -27,7 +27,7 @@ color = Colors.StaticMIX((Colors.purple, Colors.blue))
 def main():
     global threadcount, clearingcnt, clearingproxy, randomUseragent, timeout, sitelist, start
 
-    with open("h.yaml") as setting:
+    with open("prx.yaml") as setting:
         settings = yaml.safe_load(setting.read())
 
     premades = settings["premades"]
@@ -209,7 +209,7 @@ def main():
     print(f"{white}[{color}^{white}] Remaining Proxies: {color}{lenproxies}{white}\n")
     print(f"{white}[{color}^{white}] Writing {color}Proxies\n")
 
-    with open("h.txt", "w") as output:
+    with open("prx.txt", "w") as output:
 
         for i in proxies:
             output.write(i.replace("\n", "") + "\n")
