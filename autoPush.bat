@@ -5,8 +5,10 @@ del outh.txt
 del outs4.txt
 del outs5.txt
 del live.txt
+del all.txt
 TIMEOUT 2
-ktip.exe -file prx.txt -o live.txt -timeout 15 -workers 1500 -silent
+ktip.exe -file prx.txt -o all.txt -timeout 40 -workers 2000 -silent
+ktip2.exe -i all.txt -o live.txt -c 900
 TIMEOUT 2
 python removeschema.py
 	:: Navigate to the directory you wish to push to GitHub
@@ -34,7 +36,7 @@ python removeschema.py
 	
 	::Wait 900 seconds until going to the start of the loop.
 	::Change as needed.
-	TIMEOUT 1000
+	TIMEOUT 60
 	
 ::Restart from the top.	
 goto loop

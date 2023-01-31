@@ -7,7 +7,7 @@
 
     randomUseragent: "y", # Decides if random useragent is used | '?' for asking | 'y' for random useragent | 'n' will use the most common useragent
 
-    threads: "10", # '?' for asking | '[Threadcount]'
+    threads: "5", # '?' for asking | '[Threadcount]'
 
-    timeout: "300" # Sets timeout for the sites | '?' for asking | '[seconds]' | '10' is default
+    timeout: "1000" # Sets timeout for the sites | '?' for asking | '[seconds]' | '10' is default
 }

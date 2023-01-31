@@ -5,9 +5,7 @@ try:
     import httpx, yaml
     from pystyle import Colors, Colorate, Center
 except ImportError:
-    os.system('python -m pip install httpx[http2]')
-    os.system('python -m pip install pyyaml')
-    os.system('python -m pip install pystyle')
+    os.system('python -m pip install httpx[http2] pyyaml pystyle')
     import httpx, yaml
     from pystyle import Colors, Colorate, Center
 
@@ -27,166 +25,15 @@ color = Colors.StaticMIX((Colors.purple, Colors.blue))
 def main():
     global threadcount, clearingcnt, clearingproxy, randomUseragent, timeout, sitelist, start
 
-    with open("prx.yaml") as setting:
-        settings = yaml.safe_load(setting.read())
-
-    premades = settings["premades"]
-    clearingcnt = settings["removeWebsites"]
-    clearingproxy = settings["removeProxyless"]
-    randomUseragent = settings["randomUseragent"]
-    threads = settings["threads"]
-    timeout = settings["timeout"]
-
-    terminal()
-
     printLogo()
     print()
+    config, clearingcnt, clearingproxy, randomUseragent, threads, timeout = getSettings()
 
-    yes = ["yes", "y", "ye"]
-    no = ["no", "n", "nah"]
-
-    if premades == "?":
-        premades = input(f"{white}[{color}^{white}] {color}Use premades [y/n] {white}>> {color}")
-        if premades in yes:
-            os.system("cls")
-            printLogo()
-            print(Colorate.Diagonal(Colors.DynamicMIX((Colors.dark_gray, Colors.StaticMIX((Colors.purple, Colors.blue)))), Center.XCenter("\n[1] HTTP/S\t[2] SOCKS4\t[3] SOCKS5")))
-
-            premades = input(f"\n{white}[{color}^{white}] {white}>> {color}")
-
-        elif premades not in no:
-            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(10)
-            main()
-            exit()
-
-    elif premades != "1" and premades != "2" and premades != "3" and premades != "n":
-        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at premades")
-        input()
-        exit()
-
-    config = {"1": "premades/h.txt", "2": "premades/s4.txt", "3": "premades/s5.txt", "n": "sites.txt", "no": "sites.txt"}
-
-    try:
-        config = config[premades]
-    except KeyError:
-        print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-        time.sleep(10)
-        main()
-        exit()
-
-
-    printLogo()
-
-    if clearingcnt == "?":
-
-        clearingcnt = input(f"\n{white}[{color}^{white}] {color}Remove not connectable site [y/n] {white}>> {color}")
-
-        if clearingcnt not in yes and clearingcnt not in no:
-            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(10)
-            main()
-            exit()
-    elif clearingcnt not in yes and clearingcnt not in no:
-        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removewebsites")
-        input()
-        exit()
+    terminal()
     
-    if clearingcnt in yes:
-        clearingcnt = True
-
-    printLogo()
-
-    if clearingproxy == "?":
-
-        clearingproxy = input(f"\n{white}[{color}^{white}] {color}Remove sites with no proxies [y/n] {white}>> {color}")
-
-        if clearingproxy != "y" and clearingproxy != "ye" and clearingproxy != "yes" and clearingproxy != "n" and clearingproxy != "no":
-            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(10)
-            main()
-            exit()
-    
-    elif clearingproxy != "y" and clearingproxy != "ye" and clearingproxy != "yes" and clearingproxy != "n" and clearingproxy != "no":
-            print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removeproxyless")
-            input()
-            exit()
-
-    if clearingproxy == "y" or clearingproxy == "ye" or clearingproxy == "yes":
-        clearingproxy = True
-    
-    printLogo()
-    
-    if randomUseragent == "?":
-
-        randomUseragent = input(f"\n{white}[{color}^{white}] {color}Random Useragent? [y/n] {white}>> {color}")
-
-        if randomUseragent not in yes and randomUseragent not in no:
-            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
-            time.sleep(10)
-            main()
-            exit()
-    
-    elif randomUseragent not in yes and randomUseragent not in no:
-            print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removeproxyless")
-            input()
-            exit()
-
-    if randomUseragent in yes:
-        randomUseragent = True
-
-    
-    printLogo()
-
-    if timeout == "?":
-        timeout = input(f"\n{white}[{color}^{white}] {color}Timeout [seconds] {white}>> {color}")
-
-    elif timeout.isdigit() == False:
-        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at threads")
-        input()
-        exit()
-
-    try:
-        timeout = int(timeout)
-    except ValueError:
-        print(f"{white}[{color}!{white}] {color}Timeout needs a number")
-        time.sleep(10)
-        main()
-        exit()
-    
-    if timeout < 1:
-        print(f"{white}[{color}!{white}] {color}Timeout must be higher than 0")
-        time.sleep(10)
-        main()
-        exit()
-    
-    printLogo()
-
-    if threads == "?":
-        threads = input(f"\n{white}[{color}^{white}] {color}Threads {white}>> {color}")
-
-    elif threads.isdigit() == False:
-        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at threads")
-        input()
-        exit()
-
-    try:
-        threads = int(threads)
-    except ValueError:
-        print(f"{white}[{color}!{white}] {color}Thread needs a number")
-        time.sleep(10)
-        main()
-        exit()
-        
-    if threads < 1:
-        print(f"{white}[{color}!{white}] {color}Thread needs a number greater than 0")
-        time.sleep(10)
-        main()
-        exit()
-    
-    printLogo()
     start = time.time()
 
+    #dispatcher
     with open(config) as sites:
 
         sitelist = sites.readlines()
@@ -228,6 +75,8 @@ def main():
     print(f"{white}[{color}^{white}] Finished in {color}{time.time()-start:.2f}s{white}!\n")
     print("You can now close the tab")
 
+    input("")
+
 
 def scrape(site: str):
     global proxies, threadcount, proxycount
@@ -250,6 +99,161 @@ def scrape(site: str):
             goodsites.remove(site)
     finally:
         threadcount -= 1
+
+def getSettings() -> list:
+    with open("prx.yaml") as setting:
+        settings = yaml.safe_load(setting.read())
+
+    premades = settings["premades"]
+    clearingcnt = settings["removeWebsites"]
+    clearingproxy = settings["removeProxyless"]
+    randomUseragent = settings["randomUseragent"]
+    threads = settings["threads"]
+    timeout = settings["timeout"]
+
+    yes = ["yes", "y", "ye"]
+    no = ["no", "n", "nah"]
+
+    if premades == "?":
+        premades = input(f"{white}[{color}^{white}] {color}Use premades [y/n] {white}>> {color}")
+        if premades in yes:
+            os.system("cls")
+            printLogo()
+            print(Colorate.Diagonal(Colors.DynamicMIX((Colors.dark_gray, Colors.StaticMIX((Colors.purple, Colors.blue)))), Center.XCenter("\n[1] HTTP/S\t[2] SOCKS4\t[3] SOCKS5")))
+
+            premades = input(f"\n{white}[{color}^{white}] {white}>> {color}")
+
+        elif premades not in no:
+            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
+            time.sleep(30)
+            main()
+            exit()
+
+    elif premades != "1" and premades != "2" and premades != "3" and premades != "n":
+        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at premades")
+        input()
+        exit()
+
+    config = {"1": "premades/h.txt", "2": "premades/s4.txt", "3": "premades/s5.txt", "n": "sites.txt", "no": "sites.txt"}
+
+    try:
+        config = config[premades]
+    except KeyError:
+        print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
+        time.sleep(30)
+        main()
+        exit()
+
+
+    printLogo()
+
+    if clearingcnt == "?":
+
+        clearingcnt = input(f"\n{white}[{color}^{white}] {color}Remove not connectable site [y/n] {white}>> {color}")
+
+        if clearingcnt not in yes and clearingcnt not in no:
+            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
+            time.sleep(30)
+            main()
+            exit()
+    elif clearingcnt not in yes and clearingcnt not in no:
+        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removewebsites")
+        input()
+        exit()
+    
+    if clearingcnt in yes:
+        clearingcnt = True
+
+    printLogo()
+
+    if clearingproxy == "?":
+
+        clearingproxy = input(f"\n{white}[{color}^{white}] {color}Remove sites with no proxies [y/n] {white}>> {color}")
+
+        if clearingproxy != "y" and clearingproxy != "ye" and clearingproxy != "yes" and clearingproxy != "n" and clearingproxy != "no":
+            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
+            time.sleep(30)
+            main()
+            exit()
+    
+    elif clearingproxy != "y" and clearingproxy != "ye" and clearingproxy != "yes" and clearingproxy != "n" and clearingproxy != "no":
+            print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removeproxyless")
+            input()
+            exit()
+
+    if clearingproxy == "y" or clearingproxy == "ye" or clearingproxy == "yes":
+        clearingproxy = True
+    
+    printLogo()
+    
+    if randomUseragent == "?":
+
+        randomUseragent = input(f"\n{white}[{color}^{white}] {color}Random Useragent? [y/n] {white}>> {color}")
+
+        if randomUseragent not in yes and randomUseragent not in no:
+            print(f"{white}[{color}!{white}] {color}No option was choosen returning to home..")
+            time.sleep(30)
+            main()
+            exit()
+    
+    elif randomUseragent not in yes and randomUseragent not in no:
+            print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at removeproxyless")
+            input()
+            exit()
+
+    if randomUseragent in yes:
+        randomUseragent = True
+
+    
+    printLogo()
+
+    if timeout == "?":
+        timeout = input(f"\n{white}[{color}^{white}] {color}Timeout [seconds] {white}>> {color}")
+
+    elif timeout.isdigit() == False:
+        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at threads")
+        input()
+        exit()
+
+    try:
+        timeout = int(timeout)
+    except ValueError:
+        print(f"{white}[{color}!{white}] {color}Timeout needs a number")
+        time.sleep(30)
+        main()
+        exit()
+    
+    if timeout < 1:
+        print(f"{white}[{color}!{white}] {color}Timeout must be higher than 0")
+        time.sleep(30)
+        main()
+        exit()
+    
+    printLogo()
+
+    if threads == "?":
+        threads = input(f"\n{white}[{color}^{white}] {color}Threads {white}>> {color}")
+
+    elif threads.isdigit() == False:
+        print(f"{white}[{Colors.red}!{white}] {Colors.red}Error{white} in settings.json at threads")
+        input()
+        exit()
+
+    try:
+        threads = int(threads)
+    except ValueError:
+        print(f"{white}[{color}!{white}] {color}Thread needs a number")
+        time.sleep(30)
+        main()
+        exit()
+        
+    if threads < 1:
+        print(f"{white}[{color}!{white}] {color}Thread needs a number greater than 0")
+        time.sleep(30)
+        main()
+        exit()
+
+    return config, clearingcnt, clearingproxy, randomUseragent, threads, timeout
 
 def terminal(string:str = ""):
     ctypes.windll.kernel32.SetConsoleTitleW("KC Scraper | github.com/Kuucheen " + string)
@@ -274,6 +278,5 @@ def printLogo():
     print(Colorate.Diagonal(Colors.DynamicMIX((Colors.dark_gray, Colors.StaticMIX((Colors.purple, Colors.blue)))), Center.XCenter(logo)))
 
 
-
-
-main()
+if __name__ == "__main__":
+    main()
