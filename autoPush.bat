@@ -8,9 +8,10 @@ del outs4.txt
 del outs5.txt
 TIMEOUT 2
 ktip.exe -file h.txt -type http -o outh.txt -timeout 30 -workers 900 -silent
-ktip.exe -file s4.txt -type http -o outs4.txt -timeout 30 -workers 900 -silent
-ktip.exe -file s5.txt -type http -o outs5.txt -timeout 30 -workers 900 -silent
+ktip.exe -file s4.txt -type socks4 -o outs4.txt -timeout 30 -workers 900 -silent
+ktip.exe -file s5.txt -type socks5 -o outs5.txt -timeout 30 -workers 900 -silent
 TIMEOUT 2
+python removeschema.py
 	:: Navigate to the directory you wish to push to GitHub
 	::Change <path> as needed. Eg. C:\Users\rich\Desktop\Writings
 	cd C:\Users\Administrator\Desktop\TOOL VIA ACC\CÀO PROXY\PRXtungtrinh

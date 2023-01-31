@@ -70,3 +70,4 @@ https://api.openproxylist.xyz/http.txt
 https://cyber-hub.pw/statics/proxy.txt
 https://raw.githubusercontent.com/RX4096/proxy-list/main/online/https.txt
 https://www.proxyscan.io/download?type=https
+https://raw.githubusercontent.com/tungtrinh1402/PRXtungtrinh/main/outh.txt
