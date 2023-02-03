@@ -1,20 +1,9 @@
 :loop
-python prx.py
+python h.py
+python s4.py
+python s4a.py
+python s5.py
 TIMEOUT 2
-del outh.txt
-del outs4.txt
-del outs5.txt
-del live.txt
-del all.txt
-TIMEOUT 2
-ktip.exe -file prx.txt -o all.txt -timeout 40 -workers 2000 -silent
-ktip2.exe -i all.txt -o live.txt -c 900
-TIMEOUT 2
-python removeschema.py
-	:: Navigate to the directory you wish to push to GitHub
-	::Change <path> as needed. Eg. C:\Users\rich\Desktop\Writings
-	cd C:\Users\Administrator\Desktop\TOOL VIA ACC\CÀO PROXY\PRXtungtrinh
-	
 	::Initialize GitHub
 	git init
 	
@@ -36,7 +25,7 @@ python removeschema.py
 	
 	::Wait 900 seconds until going to the start of the loop.
 	::Change as needed.
-	TIMEOUT 60
+	TIMEOUT 900
 	
 ::Restart from the top.	
 goto loop
