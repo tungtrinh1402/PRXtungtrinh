@@ -73,9 +73,6 @@ def main():
     terminal()
 
     print(f"{white}[{color}^{white}] Finished in {color}{time.time()-start:.2f}s{white}!\n")
-    print("You can now close the tab")
-
-    input("")
 
 
 def scrape(site: str):

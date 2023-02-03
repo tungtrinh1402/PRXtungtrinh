@@ -19,10 +19,7 @@ TIMEOUT 2
 	
 	::Push all changes to GitHub 
 	git push
-	
-	::Alert user to script completion and relaunch.
-	echo Complete. Relaunching...
-	
+
 	::Wait 900 seconds until going to the start of the loop.
 	::Change as needed.
 	TIMEOUT 900
