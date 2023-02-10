@@ -98,7 +98,7 @@ def scrape(site: str):
         threadcount -= 1
 
 def getSettings() -> list:
-    with open("s5.yaml") as setting:
+    with open("config.yaml") as setting:
         settings = yaml.safe_load(setting.read())
 
     premades = settings["premades"]

@@ -56,7 +56,7 @@ def main():
     print(f"{white}[{color}^{white}] Remaining Proxies: {color}{lenproxies}{white}\n")
     print(f"{white}[{color}^{white}] Writing {color}Proxies\n")
 
-    with open("s4.txt", "w") as output:
+    with open("s45.txt", "w") as output:
 
         for i in proxies:
             output.write(i.replace("\n", "") + "\n")
@@ -131,7 +131,7 @@ def getSettings() -> list:
         input()
         exit()
 
-    config = {"1": "premades/h.txt", "2": "premades/s4.txt", "3": "premades/s5.txt", "n": "urls4.txt", "no": "urls4.txt"}
+    config = {"1": "premades/h.txt", "2": "premades/s4.txt", "3": "premades/s5.txt", "n": "urls45.txt", "no": "urls45.txt"}
 
     try:
         config = config[premades]

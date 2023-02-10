@@ -2,6 +2,7 @@
 python h.py
 python s4.py
 python s5.py
+python s45.py
 TIMEOUT 2
 	::Initialize GitHub
 	git init
