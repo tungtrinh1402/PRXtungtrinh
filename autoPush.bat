@@ -1,7 +1,6 @@
 :loop
 python h.py
 python s4.py
-python s4a.py
 python s5.py
 TIMEOUT 2
 	::Initialize GitHub

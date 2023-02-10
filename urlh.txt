@@ -1,13 +1,7 @@
 https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/http.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx/main/hs.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx1/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx1/main/hs.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx2/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx2/main/hs.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx3/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx3/main/hs.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx4/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx4/main/hs.txt
 https://raw.githubusercontent.com/tungtrinh1402/prx5/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx5/main/hs.txt
