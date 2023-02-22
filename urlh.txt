@@ -1,7 +1,0 @@
-https://raw.githubusercontent.com/tungtrinh1402/GRAB-PRX/main/proxies/http.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx1/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx2/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx3/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx4/main/h.txt
-https://raw.githubusercontent.com/tungtrinh1402/prx5/main/h.txt
